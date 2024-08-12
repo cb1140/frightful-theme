@@ -1,6 +1,7 @@
 <article>
     <header>
-        <h1></h1>
+        <h1><?php the_title(); ?></h1>
+        <img src="<?php echo $logo[0]; ?>" alt="logo">
         <time><?php the_date(); ?></time> <!-- -->
 
         <ul>

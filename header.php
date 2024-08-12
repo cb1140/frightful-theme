@@ -28,27 +28,25 @@
                 <?php echo get_bloginfo('name'); ?>
             </a>
             <?php
-                
 
-                wp_nav_menu(
-                    array('menu' => 'main',
+
+            wp_nav_menu(
+                array(
+                    'menu' => 'main',
                     'container' => '',
                     'theme_location' => 'main',
-                    'items_wrap' => '<ul id="" class="">%3$s</ul>') //this is where we create a wrap of the menu navigation made by WP in a ul
-                                                                 //give the individual items classes in the menu screen options
-                );
-                
-                if (function_exists('the_custom_logo')){
-                    $custom_logo_id = get_theme_mod('custom-logo');
-                    $logo = wp_get_attachment_image_src($custom_logo_id);
-                }
-            ?>
-           
-        </nav>
+                    'items_wrap' => '<ul id="" class="">%3$s</ul>'
+                ) //this is where we create a wrap of the menu navigation made by WP in a ul
+                //give the individual items classes in the menu screen options
+            );
 
-                <h1><?php the_title(); ?></h1>
-                <img src="<?php echo $logo[0]; ?>" alt="logo">
+            if (function_exists('the_custom_logo')) {
+                $custom_logo_id = get_theme_mod('custom-logo');
+                $logo = wp_get_attachment_image_src($custom_logo_id);
+            }
+            ?>
+
+        </nav>
+        <h1><?php the_title(); ?></h1>
 
     </header>
-
-
