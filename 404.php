@@ -6,7 +6,7 @@ get_header();
 
 <main>
    <h1>Page Not Found...</h1>
-   <? get_search_form();?>
+   <?php get_search_form();?>
 </main>
 
 <?php
