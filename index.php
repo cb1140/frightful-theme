@@ -14,5 +14,9 @@ get_header();
 </main>
 
 <?php
+the_posts_pagination();
+?>
+
+<?php
 get_footer();
 ?>

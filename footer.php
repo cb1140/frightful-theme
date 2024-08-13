@@ -5,12 +5,17 @@
                    
                 </ul>
             </nav>
+
+            <?php 
+            dynamic_sidebar('footer-menu');
+            ?>
         </footer>
 
         <?php
 
         wp_footer();
-        get_search_form();?>
+
+        ?>
 
     </body>
 

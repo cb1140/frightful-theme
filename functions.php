@@ -41,6 +41,22 @@ function ff_register_scripts()
 
 add_action('wp_enqueue_scripts', 'ff_register_scripts');
 
+function ff_widget_areas(){
+
+    register_sidebar(
+        array(
+        'before_title' => '',
+        'after_title' => '',
+        'before_widget' => '',
+        'after_widget' => '',
+        'name' => 'FooterMenu',
+        'id' => 'footer-menu',
+        'description' => 'Footer Widget'
+
+        ));
+}
+
+add_action('widgets_init', ff_widget_areas());
 ?>
 
 
