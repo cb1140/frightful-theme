@@ -5,6 +5,7 @@ get_header();
 ?>
 
 <main>
+
     <?php
 
     if (have_posts()) {
@@ -13,9 +14,13 @@ get_header();
             get_template_part('template-parts/content', 'movie-entry');
         }
     }
-    ?>
-</main>
 
+    ?>
+
+    <?php get_sidebar('film');?>
+
+
+</main>
 <?php
 get_footer();
 ?>
