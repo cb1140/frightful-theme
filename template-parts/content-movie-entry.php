@@ -1,4 +1,5 @@
 <article>
+
     <header>
         <h1><?php the_title(); ?></h1>
         <img src="<?php echo $logo[0]; ?>" alt="logo">
@@ -10,32 +11,32 @@
             ?>
         </ul>
         <ul>
-    <?php
-    $categories = get_the_category();
-    if ( ! empty( $categories ) ) {
-        foreach ( $categories as $category ) {
-            echo '<li id="category"><a href="' . esc_url( get_category_link( $category->term_id ) ) . '">' . esc_html( $category->name ) . '</a></li>';
-        }
-    }
-    ?>
-</ul>
+            <?php
+            $categories = get_the_category();
+            if (!empty($categories)) {
+                foreach ($categories as $category) {
+                    echo '<li id="category"><a href="' . esc_url(get_category_link($category->term_id)) . '">' . esc_html($category->name) . '</a></li>';
+                }
+            }
+            ?>
+        </ul>
 
 
 
-        
+
         <p class="comment_count"><?php comments_number(); ?></p>
     </header>
 
-    <article>
+    <?php the_content(); ?>
+</article>
 
 
 
 
 <?php
-the_content();
+
 comments_template();
 
 
 
 ?>
-</article>
