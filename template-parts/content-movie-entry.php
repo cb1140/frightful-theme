@@ -1,3 +1,9 @@
+<?php /* 
+Template Name: Single Film
+Template Post Type: page
+*/ ?>
+
+
 <article>
 
     <header>
@@ -20,23 +26,13 @@
             }
             ?>
         </ul>
-
-
-
-
         <p class="comment_count"><?php comments_number(); ?></p>
     </header>
-
     <?php the_content(); ?>
 </article>
+<?php if (function_exists('dynamic_sidebar')) {
+         get_sidebar('films');} ?>
 
 
+<?php comments_template(); ?>
 
-
-<?php
-
-comments_template();
-
-
-
-?>

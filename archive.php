@@ -1,20 +1,12 @@
-<?php
 
-get_header();
+<!-- ARCHIVE START -->
 
-?>
 
-<main>
-            <h1><?php the_title(); ?></h1>
+        <!-- PAGE-ARCHIVE.PHP -->
+        <?php get_template_part('template-parts/page', 'archive'); ?>
 
-    <?php
+    
+<!-- ARCHIVE END -->
 
-   
-            get_template_part('template-parts/content', 'archive');
-     
-    ?>
-</main>
 
-<?php
-get_footer();
-?>
+

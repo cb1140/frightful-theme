@@ -1,18 +1,9 @@
-<footer>
-    <nav aria-label="footer">
-        <?php
-        dynamic_sidebar('footer-menu');
-        ?>
-    </nav>
 
-
-</footer>
-
-<?php
-
-wp_footer();
-
-?>
+<!-- footer START -->
+	<footer>
+        <?php get_sidebar('bottom'); ?>
+		<?php wp_footer(); ?>	
+	</footer> 
 
 </body>
 

@@ -1,23 +1,8 @@
-<?php
-
-get_header();
-
-?>
+<?php get_header(); ?>
 
 <main>
-            <h1><?php the_title(); ?></h1>
-
-    <?php
-
-    if (have_posts()) {
-        while (have_posts()) {
-            the_post();
-            get_template_part('template-parts/content', 'page');
-        }
-    }
-    ?>
+    <h2>Default Page</h2>
 </main>
 
-<?php
-get_footer();
-?>
+<?php get_sidebar('films'); ?>
+<?php get_footer(); ?>

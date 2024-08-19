@@ -16,7 +16,6 @@ add_action('after_setup_theme', 'ff-theme-support');
 
 function ff_menu()
 {
-
     $locations = array(
         'main' => "Desktop Primary Top Menu Bar",
         'footer' => "Footer Menu Sitemap"
@@ -124,14 +123,15 @@ function show_related_films()
 }
 
 
+
 function ff_widgets()
 {
 
     register_sidebar(
         array(
-            'name' => 'Footer Menu',
-            'id' => 'footer-menu',
-            'description' => 'Footer Widget',
+            'name' => 'Bottom sidebar',
+            'id' => 'sidebar-bottom',
+            'description' => 'Bottom Widget Area',
             'before_title' => '',
             'after_title' => '',
             'before_widget' => '',
@@ -144,8 +144,10 @@ function ff_widgets()
     register_sidebar(
         array(
             'name' => 'Related Films Sidebar',
-            'id' => 'related-films-sidebar',
-            'description' => 'Sidebar Film Widget',
+            'id' => 'sidebar-films',
+            'description' => 'Sidebar Film Widget Area',
+            'before_title' => '',
+            'after_title' => '',
             'before_widget' => '',
             'after_widget' => ''
 

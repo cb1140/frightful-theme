@@ -1,7 +1,7 @@
 <div class="comments-wrapper">
     <div class="comments" id="comments">
+        <!-- COMMENT HEADER -->
         <div class="comments-header">
-
             <h2 class="comment-reply-title">
                 <?php
                 if (!have_comments()) {
@@ -11,8 +11,8 @@
                 }
                 ?>
 
-        </div><!-- .comments-header -->
-
+        </div>
+        <!-- COMMENT CONTENT -->
         <div class="comments-inner">
 
             <?php
@@ -24,10 +24,11 @@
             )
                 ?>
 
-        </div><!-- .comments-inner -->
+        </div>
 
-    </div><!-- comments -->
+    </div>
 
+    <!-- COMMENTS REPLY-->
     <hr class="" aria-hidden="true">
     <?php
     if (comments_open()) {
@@ -46,4 +47,3 @@
 </div>
 
 
-<!--//container-->
