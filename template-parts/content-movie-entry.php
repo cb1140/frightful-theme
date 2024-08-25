@@ -1,5 +1,5 @@
 <?php /* 
-Template Name: Single Film
+Template Name: Movie Entry
 Template Post Type: page
 */ ?>
 
