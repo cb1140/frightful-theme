@@ -1,4 +1,9 @@
 /*
+
+
+
+@override
+
 Theme Name: FFTheme
 Text Domain: FF
 Version: 1.7
@@ -7,4 +12,292 @@ Tags: movies, student
 Author: Charlotte Brown
 Author URI: https://charlotteblogs.uk
 */
+
+
+
+
+/* thanks, Eric :-)
+http://meyerweb.com/eric/tools/css/reset/ 
+v2.0 | 20110126
+License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video
+{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section
+{
+    display: block;
+}
+
+body
+{
+    font-size: 1em;
+    line-height: 1.36;
+    font-family: Vollkorn, Times, sans-serif;
+    color: #000;
+    background: #fff;
+}
+
+ol,
+ul
+{
+    list-style: none;
+}
+
+
+
+blockquote,
+q
+{
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after
+{
+    content: '';
+    content: none;
+}
+
+table
+{
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+*
+{
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+/* Body Spacing
+
+*/
+
+body
+{
+    margin: 1rem 3rem;
+    color: #0e120e;
+}
+
+/* Font Families:
+
+    Heading/Title: Rusilla Serif
+    Nav/Body: INSERTHERE
+
+*/
+
+
+@font-face
+{
+    font-family: 'Rusilla';
+    src: url(./assets/fonts/Rusillaserif-Regular.ttf);
+}
+
+h1
+{
+    font-family: 'Rusilla';
+    font-size: 2rem;
+}
+
+
+/* -- Dropdown Child Menu: --
+
+> nav main
+    > #menu-headings
+        > .dropdown
+            > a
+            > .sub-menu
+                > .dropdown-child-menu film/watchlist/login
+*/
+[aria-label='main']{
+    margin-bottom: 5rem;
+    height: 3rem;
+    width: auto;
+}
+
+[aria-label='main'] a{
+    text-decoration: none;
+}
+
+[aria-label='main'] h1
+{
+    float: left;
+}
+#menu-headings
+{
+    float: right;
+    display: inline-flex;
+    font-size: 1rem;
+}
+
+#menu-headings .dropdown:first-of-type{
+    margin-left: 0;
+    padding-left: 0;
+}
+#menu-headings li
+{
+        display: inline-flex;
+  
+}
+
+.menu-item-object-page{
+    text-decoration: none;
+    
+        padding: 0.5rem;
+        font-size: 1.2rem;
+
+}
+.dropdown:hover
+{
+    cursor: pointer;
+}
+
+.dropdown
+{
+    position: relative;
+    display: inline-block;
+}
+
+.sub-menu
+{
+    display: none;
+    position: absolute;
+    margin-top: 0.8rem;
+    background-color: #fff;
+  
+}
+
+.sub-menu:first-of-type{
+    margin-top: 1.6rem;
+}
+
+.sub-menu li
+{
+background-color: #ffffff00;
+z-index: 1;
+    padding: 0.7rem;
+    font-size: 1rem;
+        display: block;
+}
+
+.sub-menu li a:hover, h1 a:hover{
+    text-decoration: underline;
+    color: #0e120e;
+}
+
+.sub-menu .dropdown-child-item:first-of-type
+{
+    margin-top: 0.8rem;
+}
+
+.dropdown-film:hover .sub-menu,
+.dropdown-watchlist:hover .sub-menu,
+.dropdown-login:hover .sub-menu
+{
+    display: block;
+}
 

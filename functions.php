@@ -33,7 +33,7 @@ function ff_register_stylesheets()
 
 }
 
-add_action('wp_enqueue_scripts', 'ff_register_styles');
+add_action('wp_enqueue_scripts', 'ff_register_stylesheets');
 
 //initialises js scripts
 function ff_register_scripts()
@@ -121,6 +121,38 @@ function show_related_films()
     }
     ;
 }
+
+function search_movies()
+{
+    // Check for a search term
+    $term = isset($_GET['term']) ? sanitize_text_field($_GET['term']) : '';
+
+    // Query for movie posts matching the search term
+    $movies = new WP_Query([
+        'post_type' => 'movie',
+        'posts_per_page' => 10,
+        's' => $term,
+    ]);
+
+    $results = [];
+
+    if ($movies->have_posts()) {
+        while ($movies->have_posts()) {
+            $movies->the_post();
+            $results[] = [
+                'id' => get_the_ID(),
+                'title' => get_the_title(),
+            ];
+        }
+        wp_reset_postdata();
+    }
+
+    // Return results as JSON
+    wp_send_json($results);
+}
+
+add_action('wp_ajax_search_movies', 'search_movies');
+add_action('wp_ajax_nopriv_search_movies', 'search_movies');
 
 
 

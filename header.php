@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?php wp_title(''); ?></title>
     <!--Stylesheet File-->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="">
         <?php wp_head(); ?>
 
 </head>
@@ -28,17 +28,12 @@
                     'menu' => 'main',
                     'container' => '',
                     'theme_location' => 'main',
-                    'items_wrap' => '<ul id="" class="">%3$s</ul>'
+                    'items_wrap' => '<ul id="menu-headings">%3$s</ul>'
                 ) //this is where we create a wrap of the menu navigation made by WP in a ul
                 //give the individual items classes in the menu screen options
             );
 
-            if (function_exists('the_custom_logo')) {
-                $custom_logo_id = get_theme_mod('custom-logo');
-                $logo = wp_get_attachment_image_src($custom_logo_id);
-            }
             ?>
-
         </nav>
 
         
